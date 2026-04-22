@@ -16,10 +16,6 @@ export default function Home() {
     setNewStaffName("");
   };
 
-  const handleRemoveStaff = (targetIndex: number) => {
-    setStaffList((prev) => prev.filter((_, index) => index !== targetIndex));
-  };
-
   const panelBaseStyle: CSSProperties = {
     padding: "24px",
     borderRadius: "20px",
@@ -121,20 +117,6 @@ export default function Home() {
               +1 追加する
             </button>
             <button
-              onClick={() => setCount((prev) => prev - 1)}
-              style={{
-                padding: "11px 18px",
-                borderRadius: "999px",
-                border: "1px solid rgba(125, 211, 252, 0.5)",
-                cursor: "pointer",
-                fontWeight: 700,
-                color: "#bae6fd",
-                background: "rgba(12, 74, 110, 0.42)",
-              }}
-            >
-              -1 減らす
-            </button>
-            <button
               onClick={() => setCount(0)}
               style={{
                 padding: "11px 18px",
@@ -177,23 +159,6 @@ export default function Home() {
               boxSizing: "border-box",
             }}
           />
-          <div style={{ marginTop: "12px", display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            <button
-              onClick={() => setText("")}
-              disabled={!text}
-              style={{
-                padding: "9px 14px",
-                borderRadius: "10px",
-                border: "1px solid rgba(148, 163, 184, 0.45)",
-                cursor: text ? "pointer" : "not-allowed",
-                fontWeight: 700,
-                color: text ? "#c7d2fe" : "#64748b",
-                background: text ? "rgba(49, 46, 129, 0.35)" : "rgba(30, 41, 59, 0.35)",
-              }}
-            >
-              入力をクリア
-            </button>
-          </div>
           <p style={{ margin: "14px 0 0", color: "#b3c6e4" }}>
             入力中の文字:
             <span style={{ color: "#5eead4", fontWeight: 800, fontSize: "22px", marginLeft: "8px" }}>
@@ -263,21 +228,6 @@ export default function Home() {
               >
                 <span style={{ color: "#cbd5e1" }}>スタッフ:</span>{" "}
                 <strong style={{ color: "#f8fafc", fontSize: "17px" }}>{name}</strong>
-                <button
-                  onClick={() => handleRemoveStaff(index)}
-                  style={{
-                    marginLeft: "12px",
-                    padding: "6px 10px",
-                    borderRadius: "8px",
-                    border: "1px solid rgba(248, 113, 113, 0.5)",
-                    background: "rgba(127, 29, 29, 0.35)",
-                    color: "#fecaca",
-                    cursor: "pointer",
-                    fontWeight: 700,
-                  }}
-                >
-                  削除
-                </button>
               </li>
             ))}
           </ul>
