@@ -40,7 +40,7 @@ export default function Home() {
             SHIFT MANAGEMENT
           </p>
           <h1 style={{ margin: "8px 0 0", fontSize: "42px", lineHeight: 1.05, color: "#ffffff" }}>
-            スタッフ管理ダッシュボード
+            スタッフ管理ダッシュボード（branchお試し中！！！）
           </h1>
           <p style={{ margin: "12px 0 0", color: "#9fb6d8", fontSize: "16px" }}>
             直感的に操作できる、モダンなシフトアプリのデモ画面
